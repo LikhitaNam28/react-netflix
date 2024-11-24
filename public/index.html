@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX</title>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        input::placeholder{
+            color:white;
+        }
+    .inputEmail{
+        background-color: rgba(0,0,0,0.6);
+        height: 45px;
+        width: 320px;
+        border:1px solid rgb(158, 155, 155);
+        color:white;
+    }
+        .mid2{
+            padding-top:2% ;
+        }
+        .mid1{
+            padding-top: 12%;
+            font-size: 45px;
+            font-weight: bold;
+        }
+        .back_Image{
+            background-image:url("image.png") ;
+            background-size: cover;
+            color: azure;
+            height: 768px; }
+            section{
+                 background-color: rgba(0,0,0,0.6);
+                 height: 768px;
+
+            }
+        .brand-name{
+            color:red;
+            font-weight: bold;
+            font-size: 40px;
+            padding-left: 12%;
+        }
+    </style>
+    <script type="text/babel">
+        function Middle(){
+           return(<div className="mid1"><center>Unlimited movies, TV shows and more</center><center><h3>Watch anywhere. Cancel anytime.</h3></center>
+                </div>
+            )
+        }
+        function Search(){
+            return(<div className="mid2">
+                <center><h5>Ready to watch? Enter your email to create or restart your membership.</h5></center>
+                <center><input type="text" placeholder="Email address" className="inputEmail me-4"/><button className="btn btn-danger"><b>Get Started ></b></button></center>
+                </div>)
+        }
+        function Head_comp(){
+        return(<header className="p-3 d-flex justify-content-between">
+            <div className="brand-name">NETFLIX</div>
+            <div className="d-flex justify-content-between">
+                <div className="dropdown me-3">
+                <button className="btn btn-dark dropdown-toggle">
+                    <span className="bi bi-globe"></span>
+                    Language
+                    </button>
+                    </div>
+                    <div>
+                    <button className="btn btn-danger">Signin</button>
+                    </div>
+                </div>
+            </header>)
+       }
+       function Back_Image(){
+        return(
+            <div className="back_Image">
+                <section>
+                    <Head_comp/>
+                    <Middle/>
+                    <Search/>
+                    </section>
+            
+        </div>
+        )
+       }
+       
+       const root=ReactDOM.createRoot(document.getElementById("root"));
+       root.render(<Back_Image/>);
+        
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
